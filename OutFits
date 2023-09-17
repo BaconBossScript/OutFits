@@ -3,13 +3,20 @@ local Window = OrionLib:MakeWindow({Name = "BaconBoss Hub | ENDLESS OUTFITS", Hi
 
 
 getgenv().tpPlace = "string"
+_G.uh = true
 
 function Teleport(teleportPlace)
     local player = game.Players.LocalPlayer
     player.Character.HumanoidRootPart.CFrame = teleportPlace
 end
 
-
+function uh()
+	 while _G.uh == true do
+     game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.LimitedItemService.RF.DepositShard:InvokeServer()
+	 wait(0.1)
+	end
+end
+ 
 local TpTab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -89,3 +96,12 @@ TpTab:AddButton({
 		end
     end
 }) 
+
+TpTab:AddToggle({
+	Name = "Auto Deposit Shards",
+	Default = false,
+	Callback = function(Value)
+		_G.uh = Value
+        uh()
+	end    
+})
