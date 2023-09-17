@@ -19,10 +19,17 @@ local TpTab = Window:MakeTab({
 TpTab:AddLabel("Note: This For The First Quest")
 
 TpTab:AddButton({
-	Name = "Dex",
+	Name = "Find Infinity Heart Necklace",
 	Callback = function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-    end
+		local targetName = "Infinity Heart Necklace (3.0)"
+		local targetObject = game:GetService("ReplicatedStorage").OutfitsStorage:FindFirstChild(targetName, true)
+	
+		if targetObject then
+			game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(targetObject.CFrame)
+		else
+			warn("Object not Found!")
+		end   
+	end
 }) 
 
 TpTab:AddLabel("Note: This For The Second Quest")
