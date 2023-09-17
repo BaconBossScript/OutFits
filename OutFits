@@ -1,0 +1,84 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BaconBoss Hub | ENDLESS OUTFITS", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+getgenv().tpPlace = "string"
+
+function Teleport(teleportPlace)
+    local player = game.Players.LocalPlayer
+    player.Character.HumanoidRootPart.CFrame = teleportPlace
+end
+
+
+local TpTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+TpTab:AddLabel("Note: This For The First Quest")
+
+TpTab:AddButton({
+	Name = "Dex",
+	Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+    end
+}) 
+
+TpTab:AddLabel("Note: This For The Second Quest")
+
+TpTab:AddDropdown({
+	Name = "Select",
+	Default = "1",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"},
+	Callback = function(Value)
+	    getgenv().tpPlace = Value  
+	end    
+})
+
+TpTab:AddButton({
+	Name = "Tp",
+	Callback = function()
+	    if getgenv().tpPlace == "1" then
+      	 Teleport(game:GetService("Workspace").Shards["77369040-42c3-422b-9aa0-3dbf233b7fa7"].CFrame)
+		elseif getgenv().tpPlace == "2" then
+         Teleport(game:GetService("Workspace").Shards["133d41f1-9e91-4540-b747-c974fc9924e4"].CFrame)
+		elseif getgenv().tpPlace == "3" then
+         Teleport(game:GetService("Workspace").Shards["3b794d47-2cc5-4528-9344-4c6c841fda9b"].CFrame)
+		elseif getgenv().tpPlace == "4" then
+         Teleport(game:GetService("Workspace").Shards["8ec8acfb-b1ad-4077-a958-9b16383174dc"].CFrame)
+		elseif getgenv().tpPlace == "5" then
+         Teleport(game:GetService("Workspace").Shards["c05d9097-18c2-4920-9dd7-c9a7cffbcde8"].CFrame)
+		elseif getgenv().tpPlace == "6" then
+         Teleport(game:GetService("Workspace").Shards["044040a6-a792-49a6-adfc-1110820f36a8"].CFrame)
+		elseif getgenv().tpPlace == "7" then
+         Teleport(game:GetService("Workspace").Shards["755c4a6e-1735-4494-8fd1-86fcd74f595f"].CFrame)
+		elseif getgenv().tpPlace == "8" then
+         Teleport(game:GetService("Workspace").Shards["4f220e50-0c69-4323-8f7c-7eec65cd92c8"].CFrame)
+		elseif getgenv().tpPlace == "9" then
+         Teleport(game:GetService("Workspace").Shards["185da809-40dc-4e5e-8ff1-5d2cef108dd4"].CFrame)
+		elseif getgenv().tpPlace == "10" then
+         Teleport(game:GetService("Workspace").Shards["4e3cd86c-330f-4d76-bb67-680eb2ebdf24"].CFrame)
+		elseif getgenv().tpPlace == "11" then
+         Teleport(game:GetService("Workspace").Shards["3dd128c1-41f6-4a67-a170-cbf16368b5cf"].CFrame)
+		elseif getgenv().tpPlace == "12" then
+         Teleport(game:GetService("Workspace").Shards["22160d4a-1feb-4162-abdf-b6828e020dcc"].CFrame)
+		elseif getgenv().tpPlace == "13" then
+         Teleport(game:GetService("Workspace").Shards["ec06abb5-ed54-49be-bde4-7252b8ec907b"].CFrame)
+		elseif getgenv().tpPlace == "14" then
+         Teleport(game:GetService("Workspace").Shards["e08316f8-14a1-4836-bb92-eb971220cad0"].CFrame)
+		elseif getgenv().tpPlace == "15" then
+         Teleport(game:GetService("Workspace").Shards["afcabd9d-934c-4665-b843-663b3178d652"].CFrame)
+		elseif getgenv().tpPlace == "16" then
+         Teleport(game:GetService("Workspace").Shards["dfea7654-1072-46c3-b3bb-4a3d7da8eab5"].CFrame)
+		elseif getgenv().tpPlace == "17" then
+         Teleport(game:GetService("Workspace").Shards["4c3570fe-4bff-496c-ac94-c975b1e2ddfe"].CFrame)
+		elseif getgenv().tpPlace == "18" then
+         Teleport(game:GetService("Workspace").Shards["39340535-e379-4657-a1f0-3c0bc97f2880"].CFrame)
+		elseif getgenv().tpPlace == "19" then
+         Teleport(game:GetService("Workspace").Shards["b2174103-0ebe-4211-af58-7cc7d776f022"].CFrame)
+		elseif getgenv().tpPlace == "20" then
+         Teleport(game:GetService("Workspace").Shards["43751abf-f7e2-4b49-8eba-4c8370b3c431"].CFrame)
+		end
+    end
+}) 
